@@ -72,6 +72,17 @@ void display(){ //Prosedur menampilkan elemen array yang sudah tersusun
     cout << endl;
 }
 
+int main(){ //Program utama
+    input();
+
+    bubbleSortArray();
+    display();
+
+    system("pause");
+    return 0;
+
+}
+
 
 
 
