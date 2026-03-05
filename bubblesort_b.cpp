@@ -5,7 +5,7 @@ using namespace std;
 int arr[20]; //Deklarasi array global dengan ukuran 20
 int n; //Deklarasi variabel n dengan tipe data integer
 
-void input(){ //Prosedutr input
+void input(){ //Prosedur input
     int d;
     while (true){
         cout << "Mau barapa elemen pada array? : ";
@@ -25,6 +25,32 @@ cout << "======================" << endl;
 for (int i=0; i<n; i++){
     cout << "Data ke-" << (i+1) << ": ";
     cin >> arr[i];}
+}
+
+void bubbleSortArray(){ //Prosedur bubble sort
+    int pass = 1; //Deklarasi variabel dengan nama pass dan tipe data integer, serta nilai awal 1
+    do{
+        for (int j=0; j<= n - 1 - pass; j++){ //Perulangan for dengan variabel j yang dimulai dari 0 hingga n-1-pass
+                                              //j itu untuk ngecek sampai kolom berapa
+            if(arr[j] > arr[j+1]){
+                int temp; //Deklarasi wadah sementara
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+        pass += 1;
+
+        cout << "\nPass " << pass - 1 << ": ";
+        for (int k=0; k<n; k++){
+            cout << arr[k] << " ";
+        }
+
+        cout << endl;
+    }
+    while (pass <= n-1);
+
 
 }
+
 
