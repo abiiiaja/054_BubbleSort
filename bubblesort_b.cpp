@@ -49,8 +49,29 @@ void bubbleSortArray(){ //Prosedur bubble sort
         cout << endl;
     }
     while (pass <= n-1);
-
-
 }
+
+void display(){ //Prosedur menampilkan elemen array yang sudah tersusun
+    cout << endl;
+    cout << "======================" << endl;
+    cout << "Elemen array yang sudah tersusun" << endl;
+    cout << "======================" << endl;
+    cout << endl;
+
+    for (int j = 0; j < n; j++){
+        cout << arr[j] << " ";
+        if(j < n-1){
+            cout << "--> ";
+        }
+    }
+    cout << endl;
+    cout << endl;
+    
+    cout << "Jumlah pass = " << n-1 << endl;
+    cout << endl;
+    cout << endl;
+}
+
+
 
 
